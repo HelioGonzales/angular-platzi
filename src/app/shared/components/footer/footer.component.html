@@ -1,0 +1,11 @@
+<div>
+  <h3>Contacto</h3>
+  <mat-form-field>
+    <input matInput [formControl]="emailField" type="email" placeholder="Digite su correo">
+
+  </mat-form-field>
+
+
+  <button mat-raised-buton [disabled]="emailField.invalid" (click)="sendMail()">Enviar</button>
+  <p *ngIf="emailField.invalid">El campo no es valido</p>
+</div>
