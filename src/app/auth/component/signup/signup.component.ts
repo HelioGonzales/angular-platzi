@@ -31,7 +31,7 @@ export class SignupComponent implements OnInit {
       const value = this.form.value;
       this.authService.createUser(value.email, value.password)
       .then(() => {
-        this.router.navigate(["/admin/login"])
+        this.router.navigate(["/auth/login"])
       })
     }
 

@@ -42,12 +42,16 @@ const routes: Routes = [
       {
         path: "order",
         loadChildren: () => import("./order/order.module").then(m=>m.OrderModule)
+      },
+      {
+        path: "auth",
+        loadChildren: () => import("./auth/auth.module").then(m => m.AuthModule)
       }
     ]
   },
   {
         path: "admin",
-        // canActivate: [AdminGuard],
+        canActivate: [AdminGuard],
         loadChildren: () => import("./admin/admin.module").then(m=>m.AdminModule)
   },
   {
